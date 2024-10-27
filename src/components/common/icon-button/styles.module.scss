@@ -1,0 +1,26 @@
+.icon-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  :global(.icon-refresh) {
+    color: var(--color-blue);
+  }
+
+  &:hover {
+    :global(.icon-logout) {
+      color: var(--color-red);
+    }
+
+    :global(.icon-setting) {
+      color: var(--color-blue);
+    }
+  }
+}
+
+.icon {
+  font-size: 1rem;
+}
