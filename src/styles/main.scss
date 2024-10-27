@@ -1,0 +1,24 @@
+:root {
+  --color-graph-text: #78909c;
+  --color-orange: #ff8761;
+  --color-blue: #57bdde;
+  --color-purple: #b198dc;
+  --color-green: #6dc7be;
+  --color-yellow: #ffc400;
+  --color-red: #ff7043;
+  --color-online: #33de80;
+  --color-text-navbar: #adbbc2;
+  --color-bg-1: #00bfe8;
+  --color-navbar-bg: #2f3b4c;
+  --color-topbar-bg: #ffffff;
+  --color-page-bg: #eceef2;
+  --color-label-color: #2f3b4c;
+  --color-text-primary: #90a4ae;
+  --color-button-hover: #768790;
+  --color-website-icon: #006435;
+}
+
+body,
+#__next {
+  background-color: var(--color-page-bg);
+}
