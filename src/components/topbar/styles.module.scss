@@ -1,0 +1,43 @@
+@import "abstracts/variables";
+
+.topbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 999;
+
+  display: flex;
+
+  padding: 30px;
+
+  height: $topbar-height;
+
+  justify-content: space-between;
+
+  background-color: var(--color-topbar-bg);
+
+  transition: left 0.5s, width 0.5s;
+
+  box-shadow: 0px 1px 1px 2px #74747400;
+
+  &.navbar-open {
+    left: $navbar-width;
+    width: calc(100% - $navbar-width);
+  }
+}
+
+.part {
+  display: flex;
+  gap: 30px;
+}
+
+.button {
+  color: var(--color-text-primary);
+
+  &:hover {
+    color: var(--color-button-hover);
+  }
+}

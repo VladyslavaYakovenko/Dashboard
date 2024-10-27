@@ -1,0 +1,125 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.navbar {
+  box-sizing: border-box;
+  z-index: 999;
+  background-color: var(--color-navbar-bg);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+
+  transition: transform 0.5s;
+  transform: translate(-100%);
+
+  width: $navbar-width;
+
+  &.open {
+    transform: translate(0);
+  }
+}
+
+.head {
+  background-color: var(--color-bg-1);
+
+  padding: 20px 30px;
+
+  box-sizing: border-box;
+  height: $topbar-height;
+
+  position: relative;
+  width: 100%;
+
+  @include flex-align-center;
+
+  gap: 6px;
+
+  margin-bottom: 39px;
+
+  color: var(--color-website-icon);
+  fill: var(--color-website-icon);
+
+  h1 {
+    font-family: "Lobster", cursive;
+  }
+}
+
+.profile {
+  @include flex-align-center;
+
+  gap: 15px;
+  margin-bottom: 26px;
+
+  padding: 0 30px;
+
+  .photo {
+    border-radius: 50%;
+  }
+
+  .photo-container {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      width: 16px;
+      height: 16px;
+      bottom: 0;
+      right: 0;
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      border: solid 5px var(--color-navbar-bg);
+      background-color: var(--color-red);
+    }
+
+    &.online {
+      &::after {
+        background-color: var(--color-online);
+      }
+    }
+  }
+}
+
+.profile-info {
+  @include flex-column;
+
+  gap: 5px;
+
+  color: #fff;
+}
+
+.main {
+  @include flex-column;
+}
+
+.links {
+  @include flex-column;
+}
+
+.separator {
+  height: 1px;
+  box-sizing: border-box;
+
+  background-color: rgba(85, 95, 114, 1);
+}
+
+.link {
+  position: relative;
+
+  .messages-count {
+    position: absolute;
+    padding: 8px 13px;
+    background-color: var(--color-blue);
+    color: #fff;
+    border-radius: 32px;
+    top: calc(50% - 16px);
+
+    right: 15px;
+  }
+}
