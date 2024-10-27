@@ -1,0 +1,94 @@
+@import "abstracts/mixins";
+
+.table-wrapper {
+  background-color: #fff;
+  color: var(--color-graph-text);
+}
+
+.top {
+  @include flex-align-center;
+
+  padding: 22px 30px;
+  padding-bottom: 0;
+
+  margin-bottom: 13px;
+
+  h3 {
+    margin-right: auto;
+    color: black;
+    font-size: 25px;
+  }
+
+  .left {
+    @include flex-align-center;
+    gap: 28px;
+  }
+}
+
+.row {
+  @include flex-align-center;
+  position: relative;
+  flex: 1;
+
+  border-top: 1px solid rgba(218, 228, 232, 1);
+
+  .col {
+    @include flex-align-center;
+    height: 100%;
+    padding: 0 30px;
+    gap: 7px;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(218, 228, 232, 1);
+    }
+
+    &:first-child {
+      flex: 3.2;
+    }
+
+    &:nth-child(2) {
+      flex: 5.5;
+    }
+
+    &:last-child {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+}
+
+.body {
+  @include flex-column;
+  height: 211px;
+}
+
+.progress {
+  width: 100%;
+  position: relative;
+  background-color: #dae4e8;
+  height: 15px;
+  border-radius: 16px;
+
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: inherit;
+
+    &.yellow {
+      background-color: var(--color-yellow);
+    }
+    &.green {
+      background-color: var(--color-green);
+    }
+
+    &.red {
+      background-color: var(--color-red);
+    }
+
+    &.blue {
+      background-color: var(--color-blue);
+    }
+  }
+}
