@@ -1,0 +1,39 @@
+@import "abstracts/mixins";
+
+.link {
+  position: relative;
+  @include flex-align-center;
+  color: var(--color-text-primary);
+
+  cursor: pointer;
+
+  gap: 14px;
+
+  padding: 21px 30px;
+
+  text-transform: capitalize;
+
+  &:hover {
+    color: #c5dbe5;
+  }
+
+  &.active {
+    background-color: #2a3344;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background-color: var(--color-blue);
+      height: 100%;
+      width: 3px;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
