@@ -1,0 +1,64 @@
+.info-card {
+  background-color: #fff;
+  display: flex;
+
+  &.orange {
+    .left {
+      background-color: var(--color-orange);
+    }
+
+    .title {
+      color: var(--color-orange);
+    }
+  }
+
+  &.blue {
+    .left {
+      background-color: var(--color-blue);
+    }
+
+    .title {
+      color: var(--color-blue);
+    }
+  }
+
+  &.purple {
+    .left {
+      background-color: var(--color-purple);
+    }
+
+    .title {
+      color: var(--color-purple);
+    }
+  }
+
+  &.green {
+    .left {
+      background-color: var(--color-green);
+    }
+
+    .title {
+      color: var(--color-green);
+    }
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.left {
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  padding: 30px;
+}
+
+.amount {
+  font-size: 1.3rem;
+}

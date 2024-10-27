@@ -1,0 +1,87 @@
+@import "abstracts/mixins";
+
+.profile-container {
+  grid-column: 3 / 5;
+
+  background-color: #fff;
+
+  @include flex-column;
+
+  position: relative;
+
+  height: 400px;
+
+  gap: 30px;
+}
+
+.profile-top {
+  background: url("/profile-image.png") no-repeat center;
+  background-size: 125%;
+
+  margin-bottom: 40px;
+
+  backdrop-filter: invert(0.75);
+
+  position: relative;
+
+  max-height: 173px;
+
+  width: 100%;
+
+  flex: 1;
+
+  @include flex-column-all-center;
+
+  .profile-text {
+    color: #fff;
+  }
+}
+
+.profile-image-container {
+  position: absolute;
+  bottom: -40px;
+  width: fit-content;
+  height: fit-content;
+
+  left: calc(50% - 40px);
+
+  border: 5px solid #fff;
+  border-radius: 50%;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  padding: 0 40px;
+}
+
+.profile-bottom {
+  display: flex;
+
+  .item {
+    flex: 1;
+
+    @include flex-column-align-center;
+
+    &:nth-child(2) {
+      border-left: 1px solid rgba(207, 216, 220, 1);
+      border-right: 1px solid rgba(207, 216, 220, 1);
+    }
+  }
+}
+
+.name,
+.description {
+  color: var(--color-graph-text);
+}
+
+.value {
+  font-size: 33px;
+}
